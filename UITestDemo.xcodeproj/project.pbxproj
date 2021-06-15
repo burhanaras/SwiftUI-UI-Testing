@@ -81,6 +81,7 @@
 		9428D4F0266A45C30028AE5B = {
 			isa = PBXGroup;
 			children = (
+				94EDE83F2678AA1400625325 /* Screenshots */,
 				9428D4FB266A45C30028AE5B /* UITestDemo */,
 				9428D50D266A45C60028AE5B /* UITestDemoTests */,
 				9428D518266A45C60028AE5B /* UITestDemoUITests */,
@@ -136,6 +137,13 @@
 				9428D51B266A45C60028AE5B /* Info.plist */,
 			);
 			path = UITestDemoUITests;
+			sourceTree = "<group>";
+		};
+		94EDE83F2678AA1400625325 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

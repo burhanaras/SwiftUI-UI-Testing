@@ -89,7 +89,10 @@ class UITestDemoUITests: XCTestCase {
         loginbutton.tap()
         let password = app.secureTextFields["Password"]
         
-        // WHEN: User types text on username
+        // WHEN: User types text on username and password
+        let username = app.textFields["Username"]
+        username.tap()
+        username.typeText("Selamun Aleykum")
         password.tap()
         app.keys["p"].tap()
         app.keys["a"].tap()
