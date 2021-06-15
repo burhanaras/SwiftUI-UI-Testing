@@ -7,6 +7,8 @@ This project aims to demonstrate how to write automated UI tests for SwiftUI com
 
 Writing good UI testing code is hardly different from writing good software in general: Learn from the past, follow SOLID principles, and read Robert Martin’s [Clean Code](https://sites.google.com/site/unclebobconsultingllc/books). 
 
+![alt text](https://github.com/burhanaras/SwiftUI-UI-Testing/raw/main/Screenshots/screen.gif "SwiftUI Automated UI Testing")
+
 ## Understanding Best Practices for Testing
 The acronym FIRST describes a concise set of criteria for effective unit tests. Those criteria are:
 
