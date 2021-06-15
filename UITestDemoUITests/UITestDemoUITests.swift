@@ -87,10 +87,10 @@ class UITestDemoUITests: XCTestCase {
         // GIVEN: We have a login button and pssword secure textfield after login button is tapped
         let loginbutton  = app.buttons["loginButton"]
         loginbutton.tap()
+        let username = app.textFields["Username"]
         let password = app.secureTextFields["Password"]
         
         // WHEN: User types text on username and password
-        let username = app.textFields["Username"]
         username.tap()
         username.typeText("Selamun Aleykum")
         password.tap()
@@ -118,4 +118,25 @@ class UITestDemoUITests: XCTestCase {
         app.alerts.element.buttons["OK"].tap()
         XCTAssertFalse(app.alerts.element.exists)
     }
+    
+    func test_userShouldSeeWelcomeMessage_whenUserIsLoggedIn(){
+        // GIVEN: We have username and password fields
+        let loginButton = app.buttons["loginButton"]
+        loginButton.tap()
+        let username = app.textFields["Username"]
+        let password = app.secureTextFields["Password"]
+        let loginNow = app.buttons["loginNow"]
+        let usernameText = "user"
+        
+        // WHEN: user enters correct username and password and taps LoginNow
+        username.tap()
+        username.typeText(usernameText)
+        password.tap()
+        password.typeText("pass")
+        loginNow.tap()
+        
+        // THEN: "Welcome [Username]" message should be visible
+        XCTAssert(app.staticTexts["Welcome onboard \(usernameText)"].exists)
+    }
+    
 }

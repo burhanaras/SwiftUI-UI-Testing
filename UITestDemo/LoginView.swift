@@ -17,7 +17,7 @@ struct LoginView: View{
         NavigationView{
             Form{
                 Section{
-                    TextField("Username", text: $user.userNAme)
+                    TextField("Username", text: $user.userName)
                     SecureField("Password", text: $user.password)
                 }
                 

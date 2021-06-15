@@ -10,16 +10,22 @@ import Combine
 
 class User: ObservableObject{
     @Published var isLoggedIn = false
-    @Published var userNAme: String = ""
+    @Published var userName: String = ""
     @Published var password: String = ""
     
     func login() -> Bool{
-        guard userNAme == "user" && password == "pass" else {
+        guard userName == "user" && password == "pass" else {
             return false
         }
         
         password = ""
         isLoggedIn = true
         return true
+    }
+    
+    func logout(){
+        userName = ""
+        password = ""
+        isLoggedIn = false
     }
 }

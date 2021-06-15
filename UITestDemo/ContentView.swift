@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var user: User
     @State var showLogin = false
     
     var body: some View {
         VStack {
-            Text("Welcome to the world of UI Testing.")
+            Text(user.isLoggedIn ? "Welcome onboard \(user.userName)" : "Welcome to the world of UI Testing.")
                 .padding()
             
             Spacer().frame(height: 20)
             
             Button(action: {
-                showLogin = true
+                if user.isLoggedIn{
+                    user.logout()
+                }else{
+                    showLogin = true
+                }
+               
             }, label: {
-                Text("Login")
+                Text(user.isLoggedIn ? "Logout" : "Login")
                     .padding()
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
