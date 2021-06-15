@@ -1,4 +1,4 @@
-📱💻🖥❤️🖥💻📱
+📱 💻 🖥 ❤️ 🖥 💻 📱
 
 # SwiftUI-UI-Testing
 
